@@ -1,0 +1,11 @@
+never  {    /* !([]<>tdma) */
+T0_init:
+	do
+	:: (! ((tdma))) -> goto accept_S4
+	:: (1) -> goto T0_init
+	od;
+accept_S4:
+	do
+	:: (! ((tdma))) -> goto accept_S4
+	od;
+}
